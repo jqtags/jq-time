@@ -1,0 +1,11 @@
+{
+	"name": "jqtags-jq-time",
+	"main": "jatags.time.js",
+	"authors": ["Animesh <kanimesh.s@gmail.com>"],
+	"description": "Extension api to jQuery",
+	"keywords": ["x-tag", "pitana", "jquery","timestamp"],
+	"dependencies": {
+		"webmodules-jqtag": ">=0.0.1"
+	},
+	"license": "MIT"
+}

@@ -1,0 +1,11 @@
+{
+	"name": "jqtags/jq-time",
+	"jqtags/jq-time": {
+		"js": ["jqtags.time.js"],
+		"on": ["webmodules/jqtag"]
+	},
+	"jqtags/jq-time/test": {
+		"js": ["test/jqtags.time.test.js"],
+		"on": ["webmodules/jqtag"]
+	}
+}
