@@ -36,7 +36,7 @@ _tag_('jqtags.time', function (test) {
         //custom types: they'll override format
         switch (this.$.type) {
           case "chat-timestamp":
-            if (moment().diff(parseInt(this.$.value), 'days') === 0) {
+            if (moment().startOf('day').diff(parseInt(this.$.value), 'hours') < 0) {
               this.$.innerHTML = moment(this.dateTime).format("h:mma");
             }
             else {
