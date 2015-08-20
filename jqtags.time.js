@@ -45,7 +45,7 @@ _tag_('jqtags.time', function (test) {
             break;
           case "until":
             var timeUntil = moment(this.dateTime).toNow(true).split(" ");
-            this.$.innerHTML = timeUntil[0] + timeUntil[1].split("")[0];
+            this.$.innerHTML = moment(this.dateTime).toNow(true) === "Invalid date" ? "-" : timeUntil[0] + timeUntil[1].split("")[0];
             break;
         }
       }
