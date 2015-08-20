@@ -2,11 +2,29 @@
 <jq-time value="1439198740550"></jq-time>
 <br/>
 <h5>With the format MM/DD/YYYY: </h5>
-<jq-time value="1439198740550" type="MM/DD/YYYY"></jq-time>
+<jq-time value="1439198740550" format="MM/D/YYYY"></jq-time>
 <br/>
 <h5>Time from now to designated time: </h5>
 <jq-time value="1439198740550" type="until"></jq-time>
 <br/>
 <h5>General timestamp with date and time: </h5>
 <jq-time value="1439198740550" type="chat-timestamp"></jq-time>
+<br/>
+<h5>With the format YYYY/D/MM: </h5>
+<jq-time value="1439198740550" format="YYYY/D/MM"></jq-time>
+<br/>
+<h5>With the format YYYY/MM/D: </h5>
+<jq-time value="1439198740550" format="YYYY/MM/D"></jq-time>
+<br/>
+
+<h3>Few examples with UTC input:</h3>
+
+<h5>With the format YYYY/MM/D: </h5>
+<jq-time value="2015-08-20T04:14:26+00:00" format="YYYY/MM/D"></jq-time>
+<br/>
+<h5>Time from now to designated time: </h5>
+<jq-time value="2015-08-20T14:23:58+00:00" type="until"></jq-time>
+<br/>
+<h5>General timestamp with date and time: </h5>
+<jq-time value="2015-08-20T04:14:26+00:00" type="chat-timestamp"></jq-time>
 <br/>
