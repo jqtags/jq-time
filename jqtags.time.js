@@ -41,7 +41,7 @@ _tag_('jqtags.time', function (test) {
           break;
         case "s":
           self.nextInterval = 1000;
-          break
+          break;
         default:
           self.nextInterval = 2700000; //45 minutes
           break;
@@ -72,7 +72,7 @@ _tag_('jqtags.time', function (test) {
               this.$.innerHTML = moment(this.dateTime).format("h:mma");
             }
             else {
-              this.$.innerHTML = moment(this.dateTime).calendar();
+              this.$.innerHTML = moment(this.dateTime).format("dddd, DD/MM/YYYY, hh:mma");
             }
             break;
           //until
@@ -88,14 +88,20 @@ _tag_('jqtags.time', function (test) {
             };
             self.currentDiff = {};
             for(var unit in self.timeDiffObj){
+              self.currentDiff.time = self.timeDiffObj[unit];
+              self.currentDiff.unit = unit;
+//              console.log(self.currentDiff);
               if(self.timeDiffObj[unit] !== 0){
-                this.$.innerHTML = self.timeDiffObj[unit] + unit;
-                self.currentDiff.time = self.timeDiffObj[unit];
-                self.currentDiff.unit = unit;
-                console.log(self.currentDiff);
+                if(self.timeDiffObj[unit] < 0){ // when time is in negativ => overdue
+                  this.$.innerHTML = Math.abs(self.timeDiffObj[unit]) + unit;
+                  $(this.$).prepend("<i class='icon icon_overdue' style='color: #cd5555;'></i>&nbsp");
+                }
+                else{                           // normal case
+                  this.$.innerHTML = self.timeDiffObj[unit] + unit;
+                }
                 break;
               }
-              else{
+              else {
                 this.$.innerHTML = "overdue";
               }
             }
