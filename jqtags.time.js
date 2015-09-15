@@ -113,7 +113,7 @@ _tag_('jqtags.time', function (test) {
       }
       else{
         //format
-        if(this.dateTime === null){
+        if(this.dateTime === null){ 
           this.$.innerHTML = "NOT SET";
         } else {
           this.$.innerHTML = moment(this.dateTime).format(this.$.format);
