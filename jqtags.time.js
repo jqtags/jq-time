@@ -59,6 +59,9 @@ _tag_('jqtags.time', function (test) {
       if(isNaN(this.$.value)){ //case for UTC time format
         this.dateTime = new Date(this.$.value);
       }
+      else if(this.$.value === ""){
+        this.dateTime = null;
+      }
       else{                    //case for ISO date format
         this.dateTime = new Date(parseInt(this.$.value));
       }
@@ -110,7 +113,12 @@ _tag_('jqtags.time', function (test) {
       }
       else{
         //format
-        this.$.innerHTML = moment(this.dateTime).format(this.$.format);
+        console.log("__________|",this.dateTime);
+        if(this.dateTime === null){
+          this.$.innerHTML = "NOT SET";
+        } else {
+          this.$.innerHTML = moment(this.dateTime).format(this.$.format);
+        }
       }
     }
   };
