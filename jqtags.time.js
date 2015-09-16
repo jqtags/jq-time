@@ -23,6 +23,10 @@ _tag_('jqtags.time', function (test) {
       format: {
         type: "string",
         default: "D/MM/YYYY"
+      },
+      invalidtext: {
+        type: "string",
+        default: "-"
       }
     },
     attachedCallback: function () {
@@ -114,7 +118,7 @@ _tag_('jqtags.time', function (test) {
       else{
         //format
         if(this.dateTime === null){ 
-          this.$.innerHTML = "NOT SET";
+          this.$.innerHTML = this.$.invalidtext;
         } else {
           this.$.innerHTML = moment(this.dateTime).format(this.$.format);
         }
