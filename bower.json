@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "webmodules-jqtag": ">=0.0.1",
-    "moment": "~2.10.6"
+    "webmodules-moment": "latest"
   },
   "license": "MIT"
 }
